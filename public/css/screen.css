@@ -1,0 +1,31 @@
+#bestcam-badge{
+  border: #eee 1px solid;
+  width: 220px;
+  font-family:"Lucida Grande","Trebuchet MS",Verdana,sans-serif;
+  font-size:15px;
+  padding: 5px;
+  background-color: #fff;
+}
+
+#bestcam-badge a{
+  color: #4183C4;
+  text-decoration: none;
+}
+
+#bestcam-badge a:hover{
+  text-decoration: underline;
+}
+
+#bestcam-badge .header{
+  margin: 5px;
+  text-align: center;
+}
+
+#bestcam-badge img{
+  border: none;
+  padding: 5px;
+}
+
+#bestcam-badge .small{
+  font-size:11px;
+}
