@@ -9,7 +9,7 @@ class BestApp
     @doc = open("http://bestc.am/photographers/#{id}"){ |f| Hpricot(f) }
   end
 
-  def name 
+  def name
     (@doc/"#sidebar/div/h2/a").html
   end
 
@@ -21,7 +21,7 @@ class BestApp
     (@doc/"#photo_list/li/div/div").collect {|div| {:src => div.attributes['style'].match(/background-image: url\("([^")]+)"\)/)[1], :href => div.find_element('a').attributes['href']}}
   end
 
-  def id 
+  def id
     @id
   end
 
@@ -35,7 +35,7 @@ app = proc do |env|
   path = env['PATH_INFO']
   case path
   when '/'
-    return [200, { "Content-Type" => "text/html" }, 'hello world']
+    return [200, { "Content-Type" => "text/html" }, File.open(File.dirname(__FILE__) + '/public/index.html').read]
   when /[0-9]+\.js/
     photographer = path.match(/\/([0-9]+).js/)[1]
     best = BestApp.new
