@@ -11,7 +11,7 @@ buildContent = function(data){
 }
 
 buildFooter = function(data){
-  return "<div class='footer'><a class='all' href='http://bestc.am/photographers/" + data.id + "'>Show all (" + data.count + ")</a><div class='small'><a href='http://fabiokuhn.com/'>Get this badge</a> | <a href='http://thebestcamera.com/'>The Best Camera</a></div>";
+  return "<div class='footer'><a class='all' href='http://bestc.am/photographers/" + data.id + "'>Show all (" + data.count + ")</a><div class='small'><a href='http://bestcam.fabiokuhn.com/'>Get this badge</a> | <a href='http://thebestcamera.com/'>The Best Camera</a></div>";
 }
 
 loadBadge = function(){
